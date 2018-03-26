@@ -21,11 +21,14 @@ var randomNumber4 = genRandomNumInterval(1,12);
 
 //initial variables
 var totalScore = 0;
-var win = 0 
-var loss = 0  
+var win = 0; 
+var loss = 0;  
 
-//Reset Game variables
-function resetGame(){
+//reset is false
+var resetGame = false;
+
+//if resetGame is true then we reset the variables
+if (resetGame){
     //reset target number
     targetNumber = genRandomNumInterval(19,127);
     //update ui with new target number
@@ -36,6 +39,9 @@ function resetGame(){
     randomNumber2 = genRandomNumInterval(1,12);
     randomNumber3 = genRandomNumInterval(1,12);
     randomNumber4 = genRandomNumInterval(1,12);
+
+    //update total score to 0
+    totalScore = 0;
 }
 
 //function to determin win or loss
@@ -48,7 +54,7 @@ function winLossFncn(totalScore, targetNumber){
         //Display the number of wins
         $('h3#numWins').html(function(){ return '<h3>Wins: '+win+'</h3>'});
         //Reset the game
-        resetGame();
+        resetGame = true;
     }
 
     if (totalScore > targetNumber){ 
@@ -59,16 +65,18 @@ function winLossFncn(totalScore, targetNumber){
         //Display the number of losses
         $('h3#numLosses').html(function(){ return '<h3>Losses: '+loss+'</h3>'});
         //Reset the game
-        resetGame();
+        resetGame = true;
     }
 }
+
+
 
 //Function for updating the total score
 function updateTotalScore(totalScore){
     $('h2#totalScore').html(function(){ return '<h2>Total Score: '+ totalScore +'</h2>'});
 }
 
-//Image One Function
+//On Click: Image One Function
 $('img#random_one').on('click', function(){
     //tally score
     totalScore = totalScore + randomNumber1;
@@ -78,3 +86,32 @@ $('img#random_one').on('click', function(){
     winLossFncn(totalScore, targetNumber);
 });
 
+// //On Click: Image Two Function
+$('img#random_two').on('click', function(){
+    //tally score
+    totalScore = totalScore + randomNumber2;
+    //update the UI
+    updateTotalScore(totalScore);
+    //run function for win or loss
+    winLossFncn(totalScore, targetNumber);
+});
+
+//On Click: Image Three Function
+$('img#random_three').on('click', function(){
+    //tally score
+    totalScore = totalScore + randomNumber3;
+    //update the UI
+    updateTotalScore(totalScore);
+    //run function for win or loss
+    winLossFncn(totalScore, targetNumber);
+});
+
+//On Click: Image Four Function
+$('img#random_four').on('click', function(){
+    //tally score
+    totalScore = totalScore + randomNumber4;
+    //update the UI
+    updateTotalScore(totalScore);
+    //run function for win or loss
+    winLossFncn(totalScore, targetNumber);
+});
