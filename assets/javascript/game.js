@@ -48,6 +48,7 @@ function winLossFncn(totalScore, targetNumber){
         //Display the number of wins
         $('h3#numWins').html(function(){ return '<h3>Wins: '+win+'</h3>'});
         //Reset the game
+        resetGame();
     }
 
     if (totalScore > targetNumber){ 
@@ -58,6 +59,7 @@ function winLossFncn(totalScore, targetNumber){
         //Display the number of losses
         $('h3#numLosses').html(function(){ return '<h3>Losses: '+loss+'</h3>'});
         //Reset the game
+        resetGame();
     }
 }
 
