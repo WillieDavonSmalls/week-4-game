@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Document</title>
 </head>
 
@@ -36,44 +36,55 @@
         <div class="row">
             <!-- Random Number  -->
             <div class="col-md-6">
-                <h2>
+                <h2 id="randomNumber">
                     Random Number:
                     <br>
                 </h2>
             </div>
             <div class="col-md-6">
+                <!-- You Win or Lose -->
+                <h3 id="roundMsg">
+
+                </h3>
                 <!-- Wins  -->
-                <h3>
+                <h3 id="numWins">
                     Wins:
                 </h3>
                 <!-- Losses  -->
-                <h3>
+                <h3 id="numLosses">
                     Losses:
                 </h3>
             </div>
-            <!-- New Row 2:  Crystal Pictures  -->
-            <div class="row">
-                <!-- Losses  -->
-                <div class="col-md-12">
-
-                </div>
-            </div>
-            <!-- New Row 3:  Total Score  -->
-            <div class="row">
-                <!-- Losses  -->
-                <div class="col-md-6">
-                    <h2>
-                        Total Score:
-                        <br>
-                    </h2>
-
-                </div>
+        </div>
+        <!-- New Row 2:  Crystal Pictures  -->
+        <div class="row">
+            <!-- Cristal Pictures  -->
+            <div class="col-md-12">
+                    <img src="assets/images/pearl.jpg" class="img-rounded img_size" id="random_one" alt="pearl">
+                    <img src="assets/images/diamond.jpeg" class="img-rounded img_size" id="random_two" alt="diamond">
+                    <img src="assets/images/saphire.jpg" class="img-rounded img_size" id="random_three" alt="saphire">
+                    <img src="assets/images/ruby.jpg" class="img-rounded img_size" id="random_four" alt="ruby">
             </div>
         </div>
+        <!-- New Row 3:  Total Score  -->
+        <div class="row">
+            <!-- Total Score  -->
+            <div class="col-md-6">
+                <h2 id="totalScore">
+                    Total Score:
+                    <br>
+                </h2>
+
+            </div>
+            <div class="col-md-6">
 
 
+            </div>
+        </div>
+    </div>
     </div>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 </body>
 
