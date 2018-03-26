@@ -1,9 +1,6 @@
-.img_size{
+img{
+    width: 233px;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: 233px;
-}
-img{
-    align-items: center;
 }
