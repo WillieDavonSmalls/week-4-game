@@ -28,12 +28,12 @@ var loss = 0;
 function resetGame(){
     //generate random numbers
     //four jewels with random vars from 19 to 127
-    var targetNumber = genRandomNumInterval(19,127);
+    targetNumber = genRandomNumInterval(19,127);
     //four jewels with random vars from 1 to 12
-    var randomNumber1 = genRandomNumInterval(1,12);
-    var randomNumber2 = genRandomNumInterval(1,12);
-    var randomNumber3 = genRandomNumInterval(1,12);
-    var randomNumber4 = genRandomNumInterval(1,12);
+    randomNumber1 = genRandomNumInterval(1,12);
+    randomNumber2 = genRandomNumInterval(1,12);
+    randomNumber3 = genRandomNumInterval(1,12);
+    randomNumber4 = genRandomNumInterval(1,12);
 
     //update ui with new target number
     $('h2#randomNumber').html(function(){ return '<h2>Random Number: '+ targetNumber +'</h2>'});
